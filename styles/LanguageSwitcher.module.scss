@@ -1,0 +1,27 @@
+// my-app/styles/LanguageSwitcher.module.scss
+
+.langSelect {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  min-width: 110px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-accent);
+    background-color: var(--color-primary);
+    color: #121212;
+  }
+
+  option {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}

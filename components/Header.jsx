@@ -1,51 +1,63 @@
-import React, { useContext, useState } from 'react';
-import styles from '@/styles/Header.module.scss';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-import { ThemeContext } from '@/pages/_app';
-import { motion } from 'framer-motion';
+import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
+import styles from '@/styles/Header.module.scss';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
-  const { t, i18n } = useTranslation();
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { t } = useTranslation('common');
+  const [showContact, setShowContact] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const changeLang = (e) => {
-    i18n.changeLanguage(e.target.value);
-  };
+  useEffect(() => {
+    const onScroll = () => setShowContact(window.scrollY > 150);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <motion.header
-      className={styles.header}
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className={styles.container}>
-        <div className={styles.logo}>Ильгиз 🚀</div>
-        <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
-          <a href="#hero">{t('menu.home')}</a>
-          <a href="#skills">{t('menu.skills')}</a>
-          <a href="#projects">{t('menu.projects')}</a>
-          <a href="#blog">{t('menu.blog')}</a>
-          <a href="#contact">{t('menu.contact')}</a>
-        </nav>
-        <div className={styles.controls}>
-          <button onClick={toggleTheme} aria-label="Toggle theme">
-            {theme === 'light' ? '🌞' : '🌙'}
-          </button>
-          <select onChange={changeLang} value={i18n.language} aria-label="Language select">
-            <option value="ru">RU</option>
-            <option value="en">EN</option>
-          </select>
-          <button
-            className={styles.burger}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            ☰
-          </button>
+    <>
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <div className={styles.logo}>Ильгиз Саткынов</div>
+
+          {/* Весь правый блок: навигация + язык + бургер */}
+          <div className={styles.right}>
+            <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
+              <Link href="#about" onClick={() => setMenuOpen(false)}>{t('about_title')}</Link>
+              <Link href="#skills" onClick={() => setMenuOpen(false)}>{t('skills_title')}</Link>
+              <Link href="#projects" onClick={() => setMenuOpen(false)}>{t('projects_title')}</Link>
+              <Link href="#contact" onClick={() => setMenuOpen(false)}>{t('contact_title')}</Link>
+
+              <div className={styles.languageSwitcherMobile}>
+                <LanguageSwitcher />
+              </div>
+            </nav>
+
+            <div className={styles.actions}>
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className={styles.burger}
+                aria-label="Toggle menu"
+              >
+                {menuOpen ? <IoClose size={26} /> : <GiHamburgerMenu size={24} />}
+              </button>
+            </div>
+          </div>
         </div>
+      </header>
+
+      <div className={`${styles.bottomContacts} ${showContact ? styles.show : ''}`}>
+        <a href="https://t.me/yourtelegram" target="_blank" rel="noreferrer">
+          <FaTelegramPlane />
+        </a>
+        <a href="https://wa.me/yourwhatsapp" target="_blank" rel="noreferrer">
+          <FaWhatsapp />
+        </a>
       </div>
-    </motion.header>
+    </>
   );
 }

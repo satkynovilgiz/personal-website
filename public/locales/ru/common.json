@@ -1,0 +1,12 @@
+{
+  "about_title": "Обо мне",
+  "about_text": "Я — Ильгиз, молодой software engineer, увлечённый созданием современного и красивого кода.",
+  "skills_title": "Навыки",
+  "projects_title": "Проекты",
+  "contact_title": "Контакты",
+  "contact_text": "Свяжитесь со мной для сотрудничества или вопросов.",
+  "contact_name": "Ваше имя",
+  "contact_email": "Ваш email",
+  "contact_message": "Сообщение",
+  "contact_send": "Отправить"
+}

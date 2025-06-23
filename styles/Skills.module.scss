@@ -1,0 +1,46 @@
+// my-app/styles/Skills.module.scss
+.skills {
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--color-primary);
+  }
+
+  .skillGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .skillCard {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+    cursor: default;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 5px 15px var(--color-accent);
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: var(--color-primary);
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+}
