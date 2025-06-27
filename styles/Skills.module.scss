@@ -9,21 +9,27 @@
 
   .skillGrid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important; // десктоп: 5 колонок примерно
     gap: 20px !important;
     max-width: 900px !important;
     margin: 0 auto !important;
     padding: 0 15px !important;
-    
+
     @media (max-width: 768px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
-      gap: 14px !important;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important; // планшет: 4 колонки
+      gap: 16px !important;
       max-width: 100% !important;
       padding: 0 10px !important;
     }
 
     @media (max-width: 480px) {
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
+      grid-template-columns: repeat(3, 1fr) !important; // телефон: фикс 3 колонки
+      gap: 12px !important;
+      padding: 0 5px !important;
+    }
+
+    @media (max-width: 320px) {
+      grid-template-columns: repeat(2, 1fr) !important; // очень маленькие телефоны: 2 колонки
       gap: 10px !important;
       padding: 0 5px !important;
     }

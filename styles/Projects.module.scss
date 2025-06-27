@@ -51,6 +51,7 @@
     height: 100%;
     max-width: 300px;
     text-decoration: none;
+    min-width: 260px;
 
     img {
       width: 100%;
@@ -142,6 +143,7 @@
 
     .projectCard {
       max-width: 260px;
+      min-width: unset;
 
       .projectInfo {
         h3 {
@@ -154,6 +156,102 @@
 
         .readMoreBtn {
           font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .projects {
+    .slider {
+      padding: 0 10px;
+
+      .slick-slide {
+        padding: 0 6px;
+      }
+    }
+
+    .projectCard {
+      max-width: 100% !important;
+      min-width: unset;
+      width: 280px;
+
+      .projectInfo {
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.88rem;
+        }
+
+        .readMoreBtn {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .projects {
+    .slider {
+      padding: 0 5px;
+
+      .slick-slide {
+        padding: 0 4px;
+      }
+    }
+
+    .projectCard {
+      max-width: 95% !important;
+      width: 100% !important;
+      min-width: unset;
+
+      .projectInfo {
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+
+        .readMoreBtn {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .projects {
+    .slider {
+      padding: 0 5px;
+
+      .slick-slide {
+        padding: 0 4px;
+      }
+    }
+
+    .projectCard {
+      max-width: 100% !important;
+      width: 100% !important;
+      min-width: unset;
+
+      .projectInfo {
+        h3 {
+          font-size: 0.9rem;
+        }
+
+        p {
+          font-size: 0.75rem;
+        }
+
+        .readMoreBtn {
+          font-size: 0.75rem;
         }
       }
     }
