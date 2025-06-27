@@ -24,10 +24,11 @@ export default function Home() {
 }
 
 // Эта функция нужна для подгрузки переводов на сервере при сборке
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
     },
   };
 }
+

@@ -11,13 +11,17 @@
     max-width: 500px;
 
     h2 {
+      font-family: 'Lilita One', cursive; /* Яркий необычный шрифт для заголовка */
       font-size: 2.4rem;
       margin-bottom: 15px;
-      font-weight: 700;
+      font-weight: normal; /* Lilita One не поддерживает веса */
       transition: color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     p {
+      font-family: 'Poppins', sans-serif; /* Читаемый современный шрифт для текста */
       font-size: 1.1rem;
       line-height: 1.6;
       color: var(--color-text);

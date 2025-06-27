@@ -1,6 +1,5 @@
-// my-app/styles/LanguageSwitcher.module.scss
-
 .langSelect {
+  font-family: 'Poppins', sans-serif; /* Современный читаемый шрифт */
   background-color: var(--color-bg);
   color: var(--color-text);
   border: 2px solid var(--color-primary);
@@ -23,5 +22,6 @@
   option {
     background-color: var(--color-bg);
     color: var(--color-text);
+    font-family: 'Poppins', sans-serif; /* Чтобы опции тоже были в том же стиле */
   }
 }

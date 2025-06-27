@@ -1,18 +1,40 @@
-// my-app/styles/Skills.module.scss
 .skills {
   h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
     color: var(--color-primary);
+    font-family: 'Lilita One', cursive;
   }
 
   .skillGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
     max-width: 900px;
     margin: 0 auto;
+
+    @media (max-width: 640px) {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding-left: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-primary) transparent;
+
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary);
+        border-radius: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    }
   }
 
   .skillCard {
@@ -41,6 +63,9 @@
     p {
       font-weight: 600;
       font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      white-space: nowrap;
     }
   }
 }

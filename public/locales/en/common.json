@@ -1,12 +1,59 @@
-{
+{ "read_more": "Read more",
+  "read_less": "Read less",
+  "main_title": "ILGIZ SATKYNOV",
+
   "about_title": "About Me",
-  "about_text": "I'm Ilgiz, a young software engineer passionate about crafting modern and beautiful code.",
+  "about_text": "I'm a passionate Software Engineer who builds web applications, modern websites, and Telegram bots. I’m always learning new technologies, creating impactful digital solutions, and growing in the field of Computer Science.",
+
   "skills_title": "Skills",
+
   "projects_title": "Projects",
+
   "contact_title": "Contact",
-  "contact_text": "Feel free to reach out for collaborations or inquiries.",
+  "contact_text": "Interested in working together or have a question? Don’t hesitate to reach out.",
+
   "contact_name": "Your Name",
   "contact_email": "Your Email",
-  "contact_message": "Message",
-  "contact_send": "Send"
+  "contact_message": "Your Message",
+  "contact_send": "Send Message",
+  "footer_text": "© 2025 Ilgiz Satkynov. All rights reserved.",
+
+  "projects_list": [
+    {
+      "title": "Personal Website",
+      "description": "A modern, responsive portfolio built with Next.js and smooth animations to showcase my projects and skills.",
+      "link": "https://github.com/ilgiz/personal-website",
+      "img": "/images/personal.png"
+    },
+    {
+      "title": "School Telegram Bot",
+      "description": "An efficient anti-bullying bot with multilingual support, ensuring a safe and comfortable environment for students.",
+      "link": "https://github.com/satkynovilgiz/DosBol_bot.git",
+      "img": "/images/bot.jpg"
+    },
+    {
+      "title": "Kyrgyz Aeronavigation",
+      "description": "A real-time weather application powered by the OpenWeather API and React, perfect for flight planning and travel.",
+      "link": "https://ansp.kg/",
+      "img": "/images/kyrgyzaeronavigasia.png"
+    },
+    {
+      "title": "Student Portal",
+      "description": "An intuitive student management system built with Django and React that streamlines academic workflows and communication.",
+      "link": "https://nexel-eta.vercel.app/",
+      "img": "/images/nexel.png"
+    },
+    {
+      "title": "School Website",
+      "description": "A modern website for Kasylim Eshimbekov School featuring user-friendly navigation and responsive design to support the educational process.",
+      "link": "https://eshimbekov-school.vercel.app/",
+      "img": "/images/school.png"
+    },
+    {
+      "title": "UX/UI Design for Web Developer",
+      "description": "An innovative chatbot designed to support mental health through seamless integration with advanced GPT AI technology. It delivers natural and effective user interactions, helping users manage stress and improve emotional wellbeing. The project combines intuitive UX design with a modern UI for maximum comfort and engagement.",
+      "link": "https://www.figma.com/design/v7vCSG5GwrxwsygPuXCPw4/Web-Developer-Portfolio-Website-Template--Community-?node-id=44-1143&t=TTsccV8On0N6izvm-0",
+      "img": "/images/web.png"
+    }
+  ]
 }

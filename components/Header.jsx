@@ -22,7 +22,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <div className={styles.container}>
-          <div className={styles.logo}>Ильгиз Саткынов</div>
+          <div className={styles.logo}>{t('main_title')}</div>
 
           {/* Весь правый блок: навигация + язык + бургер */}
           <div className={styles.right}>

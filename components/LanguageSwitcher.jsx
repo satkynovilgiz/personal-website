@@ -19,6 +19,7 @@ export default function LanguageSwitcher() {
       aria-label="Select language"
       className={styles.langSelect}
     >
+      
       <option value="ru">Русский</option>
       <option value="en">English</option>
     </select>
