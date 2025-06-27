@@ -7,7 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function Projects() {
   const { t } = useTranslation('common');
-  const projects = t('projects_list', { returnObjects: true });
+  // Защита: если t возвращает не массив, берем пустой
+  const projectsRaw = t('projects_list', { returnObjects: true });
+  const projects = Array.isArray(projectsRaw) ? projectsRaw : [];
 
   const [expandedIndexes, setExpandedIndexes] = useState([]);
 
