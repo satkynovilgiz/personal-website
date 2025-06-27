@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;600&display=swap');
+
 .projects {
   padding: 40px 0;
 
@@ -32,6 +34,7 @@
       background-color: var(--color-primary);
       border-radius: 50%;
       color: #121212;
+      font-family: 'Montserrat', sans-serif;
 
       &:hover {
         background-color: var(--color-accent);
@@ -50,8 +53,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     max-width: 300px;
-    text-decoration: none;
     min-width: 260px;
+    text-decoration: none;
+    width: 100%; /* Чтобы карточка занимала всю доступную ширину внутри слайдера */
+    font-family: 'Montserrat', sans-serif;
 
     img {
       width: 100%;
@@ -78,9 +83,10 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      font-family: 'Montserrat', sans-serif;
 
       h3 {
-        font-family: 'Lilita One', cursive;
+        font-family: 'Montserrat', sans-serif;
         margin-bottom: 8px;
         font-size: 1.3rem;
       }
@@ -131,6 +137,8 @@
   }
 }
 
+/* --- Адаптив для планшетов и телефонов --- */
+
 @media (max-width: 768px) {
   .projects {
     .slider {
@@ -142,7 +150,7 @@
     }
 
     .projectCard {
-      max-width: 260px;
+      max-width: 100%; /* Убираем ограничение, чтобы карточка растягивалась */
       min-width: unset;
 
       .projectInfo {
@@ -173,9 +181,9 @@
     }
 
     .projectCard {
+      width: 100% !important; /* Полная ширина на маленьких экранах */
       max-width: 100% !important;
       min-width: unset;
-      width: 280px;
 
       .projectInfo {
         h3 {
@@ -205,8 +213,8 @@
     }
 
     .projectCard {
-      max-width: 95% !important;
       width: 100% !important;
+      max-width: 100% !important;
       min-width: unset;
 
       .projectInfo {
@@ -237,8 +245,8 @@
     }
 
     .projectCard {
-      max-width: 100% !important;
       width: 100% !important;
+      max-width: 100% !important;
       min-width: unset;
 
       .projectInfo {

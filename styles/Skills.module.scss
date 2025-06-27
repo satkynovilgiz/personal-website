@@ -9,7 +9,7 @@
 
   .skillGrid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important; // десктоп: 5 колонок примерно
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important; // десктоп: ~5 колонок
     gap: 20px !important;
     max-width: 900px !important;
     margin: 0 auto !important;
@@ -23,7 +23,7 @@
     }
 
     @media (max-width: 480px) {
-      grid-template-columns: repeat(3, 1fr) !important; // телефон: фикс 3 колонки
+      grid-template-columns: repeat(3, 1fr) !important; // телефон: 3 колонки
       gap: 12px !important;
       padding: 0 5px !important;
     }
