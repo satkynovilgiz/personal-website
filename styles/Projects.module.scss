@@ -12,14 +12,14 @@
   .slider {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
 
     .slick-list {
-      margin: 0 -30px;
+      margin: 0 -15px;
     }
 
     .slick-slide {
-      padding: 0 30px;
+      padding: 0 15px;
       display: flex;
       justify-content: center;
     }
@@ -50,7 +50,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     max-width: 300px;
-    width: 100%;
     text-decoration: none;
 
     img {
@@ -91,20 +90,21 @@
         line-height: 1.5;
         color: var(--color-muted);
 
-        max-height: 4.5em; // 3 строки
+        max-height: 4.5em;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        cursor: default;
         transition: max-height 0.3s ease;
       }
 
       p.expanded {
-        max-height: none;
+        max-height: none !important;
         overflow: visible;
+        display: block;
         -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
       }
 
       .readMoreBtn {
@@ -133,10 +133,10 @@
 @media (max-width: 768px) {
   .projects {
     .slider {
-      padding: 0 20px;
+      padding: 0 10px;
 
       .slick-slide {
-        padding: 0 15px;
+        padding: 0 8px;
       }
     }
 
@@ -147,9 +147,11 @@
         h3 {
           font-size: 1.15rem;
         }
+
         p {
           font-size: 0.9rem;
         }
+
         .readMoreBtn {
           font-size: 0.85rem;
         }
