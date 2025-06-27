@@ -1,71 +1,81 @@
 .skills {
   h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: var(--color-primary);
-    font-family: 'Lilita One', cursive;
+    text-align: center !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 20px !important;
+    color: var(--color-primary) !important;
+    font-family: 'Lilita One', cursive !important;
   }
 
   .skillGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 20px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+      gap: 14px !important;
+      max-width: 100% !important;
+      padding: 0 10px !important;
+    }
 
-    @media (max-width: 640px) {
-      display: flex;
-      overflow-x: auto;
-      gap: 16px;
-      padding-left: 10px;
-      scrollbar-width: thin;
-      scrollbar-color: var(--color-primary) transparent;
-
-      &::-webkit-scrollbar {
-        height: 6px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: var(--color-primary);
-        border-radius: 3px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: transparent;
-      }
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
+      gap: 10px !important;
+      padding: 0 5px !important;
     }
   }
 
   .skillCard {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 0 10px var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-text);
-    cursor: default;
-    transition: transform 0.3s ease;
+    background: #1a1a1a !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 0 10px var(--color-primary) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    color: var(--color-text) !important;
+    cursor: default !important;
+    transition: transform 0.3s ease !important;
 
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 5px 15px var(--color-accent);
+      transform: translateY(-8px) !important;
+      box-shadow: 0 5px 15px var(--color-accent) !important;
     }
 
     .icon {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: var(--color-primary);
+      font-size: 2rem !important;
+      margin-bottom: 6px !important;
+      color: var(--color-primary) !important;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem !important;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem !important;
+      }
     }
 
     p {
-      font-weight: 600;
-      font-size: 1.1rem;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      white-space: nowrap;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      font-family: 'Poppins', sans-serif !important;
+      text-align: center !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      margin: 0 !important;
+
+      @media (max-width: 768px) {
+        font-size: 0.75rem !important;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.7rem !important;
+      }
     }
   }
 }

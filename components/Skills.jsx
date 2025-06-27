@@ -30,7 +30,7 @@ const skillsList = [
   { name: 'Docker', icon: <FaDocker /> },
   { name: 'Git', icon: <FaGitAlt /> },
   { name: 'HTML / CSS', icon: <FaHtml5 /> },
-  { name: 'UX / UI Design', icon: <SiFigma /> },  // здесь иконка Figma из react-icons
+  { name: 'UX / UI Design', icon: <SiFigma /> },
 ];
 
 export default function Skills() {
