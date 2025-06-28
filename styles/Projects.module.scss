@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;600&display=swap');
 
 .projects {
-  padding: 40px 0;
+  padding: 60px 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 
   h2 {
-    font-family: 'Lilita One', cursive;
+    font-size: 2.2rem;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 
   .slider {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 
     .slick-list {
-      margin: 0 -15px;
+      margin: 0 -12px;
     }
 
     .slick-slide {
-      padding: 0 15px;
+      padding: 0 12px;
       display: flex;
       justify-content: center;
     }
@@ -34,7 +37,7 @@
       background-color: var(--color-primary);
       border-radius: 50%;
       color: #121212;
-      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.3s ease;
 
       &:hover {
         background-color: var(--color-accent);
@@ -44,51 +47,45 @@
 
   .projectCard {
     background: #1a1a1a;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(64, 109, 255, 0.2);
+    box-shadow: 0 0 10px rgba(64, 109, 255, 0.15);
     cursor: pointer;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
     max-width: 300px;
-    min-width: 260px;
+    width: 100%;
     text-decoration: none;
-    width: 100%; /* Чтобы карточка занимала всю доступную ширину внутри слайдера */
-    font-family: 'Montserrat', sans-serif;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px var(--color-accent);
+    }
 
     img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      filter: brightness(0.9);
+      filter: brightness(0.92);
       transition: filter 0.3s ease;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
 
-    &:hover img {
-      filter: brightness(1);
-    }
-
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 20px var(--color-accent);
+      &:hover {
+        filter: brightness(1);
+      }
     }
 
     .projectInfo {
-      padding: 15px 20px;
-      color: var(--color-text);
+      padding: 16px 20px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      font-family: 'Montserrat', sans-serif;
+      color: var(--color-text);
 
       h3 {
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 8px;
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        font-weight: 600;
       }
 
       p {
@@ -96,7 +93,6 @@
         font-size: 0.95rem;
         line-height: 1.5;
         color: var(--color-muted);
-
         max-height: 4.5em;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -137,12 +133,28 @@
   }
 }
 
-/* --- Адаптив для планшетов и телефонов --- */
+/* --- Адаптив --- */
+
+@media (max-width: 1024px) {
+  .projects .slider {
+    padding: 0 16px;
+
+    .slick-slide {
+      padding: 0 10px;
+    }
+  }
+}
 
 @media (max-width: 768px) {
   .projects {
+    padding: 40px 0;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
     .slider {
-      padding: 0 10px;
+      padding: 0 12px;
 
       .slick-slide {
         padding: 0 8px;
@@ -150,41 +162,7 @@
     }
 
     .projectCard {
-      max-width: 100%; /* Убираем ограничение, чтобы карточка растягивалась */
-      min-width: unset;
-
-      .projectInfo {
-        h3 {
-          font-size: 1.15rem;
-        }
-
-        p {
-          font-size: 0.9rem;
-        }
-
-        .readMoreBtn {
-          font-size: 0.85rem;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 550px) {
-  .projects {
-    .slider {
-      padding: 0 10px;
-
-      .slick-slide {
-        padding: 0 6px;
-      }
-    }
-
-    .projectCard {
-      width: 100% !important; /* Полная ширина на маленьких экранах */
-      max-width: 100% !important;
-      min-width: unset;
-
+      max-width: 100%;
       .projectInfo {
         h3 {
           font-size: 1.1rem;
@@ -195,29 +173,28 @@
         }
 
         .readMoreBtn {
-          font-size: 0.85rem;
+          font-size: 0.82rem;
         }
       }
     }
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 550px) {
   .projects {
-    .slider {
-      padding: 0 5px;
-
-      .slick-slide {
-        padding: 0 4px;
-      }
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 25px;
     }
 
     .projectCard {
-      width: 100% !important;
-      max-width: 100% !important;
-      min-width: unset;
+      img {
+        height: 150px;
+      }
 
       .projectInfo {
+        padding: 12px 14px;
+
         h3 {
           font-size: 1rem;
         }
@@ -234,10 +211,15 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 430px) {
   .projects {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
     .slider {
-      padding: 0 5px;
+      padding: 0 8px;
 
       .slick-slide {
         padding: 0 4px;
@@ -245,23 +227,66 @@
     }
 
     .projectCard {
-      width: 100% !important;
       max-width: 100% !important;
-      min-width: unset;
+      width: 100% !important;
+     .slick-prev,
+    .slick-next {
+      background: none;
+    }
+&:hover {
+     background: none;
+    }
+      img {
+        height: 140px;
+      }
 
       .projectInfo {
+        padding: 10px 12px;
+
         h3 {
-          font-size: 0.9rem;
+          font-size: 0.95rem;
         }
 
         p {
-          font-size: 0.75rem;
+          font-size: 0.8rem;
         }
 
         .readMoreBtn {
-          font-size: 0.75rem;
+          font-size: 0.78rem;
         }
       }
     }
   }
 }
+
+@media (max-width: 320px) {
+  .projects {
+    h2 {
+      font-size: 1.35rem;
+    }
+
+    .projectCard {
+      img {
+        height: 120px;
+      }
+
+      .projectInfo {
+        padding: 8px 10px;
+
+        h3 {
+          font-size: 0.88rem;
+        }
+
+        p {
+          font-size: 0.74rem;
+        }
+
+        .readMoreBtn {
+          font-size: 0.72rem;
+        }
+      }
+    }
+  }
+}
+
+

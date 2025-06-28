@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #121212;
+  background: #202020;
   box-shadow: 0 2px 12px rgba(255, 64, 129, 0.3);
   z-index: 1000;
   transition: background 0.3s ease;
@@ -146,8 +146,10 @@
       top: 60px;
       left: 0;
       width: 100%;
-      background: #121212;
+      background: #232324;
       flex-direction: column;
+      height: 240px;
+      justify-content: center;
       align-items: center;
       gap: 20px;
       max-height: 0;

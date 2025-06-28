@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function Projects() {
   const { t } = useTranslation('common');
-  // Защита: если t возвращает не массив, берем пустой
   const projectsRaw = t('projects_list', { returnObjects: true });
   const projects = Array.isArray(projectsRaw) ? projectsRaw : [];
 
@@ -15,9 +14,7 @@ export default function Projects() {
 
   const toggleExpand = (idx) => {
     setExpandedIndexes((prev) =>
-      prev.includes(idx)
-        ? prev.filter((i) => i !== idx)
-        : [...prev, idx]
+      prev.includes(idx) ? prev.filter((i) => i !== idx) : [...prev, idx]
     );
   };
 
@@ -33,7 +30,7 @@ export default function Projects() {
     pauseOnHover: true,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } },
     ],
   };
 
